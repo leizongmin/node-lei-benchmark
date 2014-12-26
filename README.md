@@ -6,7 +6,7 @@ node-lei-benchmark
 ```JavaScript
 var benchmark = require('lei-benchmark');
 
-benchmark()
+benchmark
   .trhead(2)
   .num(1000)
   .request(function (req) {

@@ -7,7 +7,7 @@ benchmark
     setTimeout(function () {
       req.time('part1');
       setTimeout(function () {
-        req.end();
+        req.end(Date.now() % 2 === 0 ? new Error() : null);
       }, Math.random() * 500);
     }, Math.random() * 500);
   })
