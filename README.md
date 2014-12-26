@@ -7,18 +7,19 @@ node-lei-benchmark
 var benchmark = require('lei-benchmark');
 
 benchmark
-  .trhead(2)
-  .num(1000)
+  .thread(10)
+  .num(100)
+  .timeout(400)
   .request(function (req) {
     setTimeout(function () {
       req.time('part1');
       setTimeout(function () {
-        req.end();
-      }, Math.random() * 1000);
-    }, Math.random() * 1000);
+        req.end(Date.now() % 3 === 0 ? new Error() : null);
+      }, Math.random() * 500);
+    }, Math.random() * 500);
   })
   .start(function (err, result) {
     if (err) throw err;
-    console.log(result);
+    console.log(result, result.list[0]);
   });
 ```
