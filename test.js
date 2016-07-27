@@ -1,4 +1,6 @@
-var benchmark = require('./');
+'use strict';
+
+const benchmark = require('./');
 
 benchmark
   .thread(10)
@@ -8,7 +10,7 @@ benchmark
     setTimeout(function () {
       req.time('part1');
       setTimeout(function () {
-        req.end(Date.now() % 3 === 0 ? new Error() : null);
+        req.end(Date.now() % 3 === 0 ? new Error('just for test') : null);
       }, Math.random() * 500);
     }, Math.random() * 500);
   })
