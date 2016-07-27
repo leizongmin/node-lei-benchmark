@@ -1,6 +1,6 @@
 {
   "name": "lei-benchmark",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "benchmark utils",
   "main": "lib/index.js",
   "scripts": {
