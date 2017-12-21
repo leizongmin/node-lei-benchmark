@@ -1,6 +1,8 @@
 node-lei-benchmark
 ==================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/leizongmin/node-lei-benchmark.svg)](https://greenkeeper.io/)
+
 基于Node.js的Benchmark工具
 
 ## 安装
